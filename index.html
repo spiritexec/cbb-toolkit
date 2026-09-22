@@ -42,8 +42,8 @@
   h2 .n{display:inline-block;background:var(--orange);color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.08em;padding:3px 8px;border-radius:2px;text-transform:uppercase;white-space:nowrap}
   h2 .n.alt{background:var(--ink)}
   h2 em{font-style:normal;font-weight:400;color:var(--grey);font-size:14px}
-  .owner{font-size:11px;color:var(--grey);margin:0 0 8px}
-  .owner strong{color:var(--ink-2)}
+  .owner-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--ink);border:1.5px solid var(--ink);border-radius:2px;padding:2px 8px;white-space:nowrap}
+  .owner-tag.unassigned{color:var(--grey);border:1.5px dashed var(--grey);font-weight:600}
   p.what{font-size:13.5px;color:var(--ink-2);line-height:1.5;margin:0 0 10px;max-width:65ch}
   h4{font-size:12px;margin:14px 0 5px;color:var(--ink);font-weight:600}
   .prompt{position:relative;border:1px solid var(--line);border-top:2px solid var(--orange);background:#FCFCFC;margin:0 0 10px;border-radius:0 0 4px 4px}
@@ -63,6 +63,8 @@
   .note strong{color:var(--ink)}
   .note.flag{border-left:3px solid var(--orange);border-color:var(--line)}
   .swap{font-size:12.5px;color:var(--ink-2);margin:8px 0 0;line-height:1.4}
+  a.link{color:var(--orange);text-decoration:none;font-weight:600}
+  a.link:hover{text-decoration:underline}
   footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
 </style>
 </head>
@@ -74,8 +76,8 @@
     <div class="kicker">CBB Toolkit · Partner network</div>
   </header>
 
-  <h1>Eight prompts, one Project. Everything the CBB toolkit needs, done in your own AI chat.</h1>
-  <p class="lede">You don't need to build anything. Copy each prompt below into Claude or ChatGPT, paste your own details in where you see [brackets], and send it. Do all eight in one Project and the last prompt turns everything into a finished deck.</p>
+  <h1>The CBB toolkit, one Project. Done in your own AI chat.</h1>
+  <p class="lede">You don't need to build anything. Copy each prompt below into Claude or ChatGPT, paste your own details in where you see [brackets], and send it. Run them in one Project and the last prompt turns everything into a finished deck.</p>
   <p class="brackets">Words in [brackets] are yours to change. Leave the rest.</p>
 
   <div class="two">
@@ -131,9 +133,8 @@
 
   <!-- STEP 1 -->
   <section class="step" id="step1">
-    <h2><span class="n">1</span> Strategy &amp; operating model <em>Does this qualify as CBB?</em></h2>
-    <p class="owner">Owner: <strong>Stefan</strong> · Target: partners / management</p>
-    <p class="what">The rules themselves aren't a prompt — they're fixed. This one just checks a real situation against them and works out who owns what.</p>
+    <h2><span class="n">1</span> <span class="owner-tag">Stefan</span> Strategy &amp; operating model <em>Does this qualify as CBB?</em></h2>
+    <p class="what">The rules aren't a prompt — they're fixed. This checks a real situation against them.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Here are AIMS's Cross-Border Business (CBB) rules:
 
 - CBB applies when two or more AIMS partners make a documented, commercially relevant contribution to winning, managing or delivering a client assignment.
@@ -151,9 +152,8 @@ Using the rules above: does this qualify as CBB? Who owns the client relationshi
 
   <!-- STEP 2 -->
   <section class="step" id="step2">
-    <h2><span class="n">2</span> Internal one-pager <em>CBB in plain English, for your office</em></h2>
-    <p class="owner">Owner: <strong>Stefan</strong> · Target: all consultants</p>
-    <p class="what">Turns the same rules into a one-page reference for anyone in your office who hasn't read the full policy.</p>
+    <h2><span class="n">2</span> <span class="owner-tag">Stefan</span> Internal one-pager <em>CBB in plain English</em></h2>
+    <p class="what">Turns the same rules into a one-page reference for anyone who hasn't read the policy.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Summarise the following into a single internal one-pager for consultants in <b>[your office, e.g. AIMS Netherlands]</b>: what CBB is, when it applies, how to log it in Ezekia, and who to contact if unsure. Plain English, one page, no jargon.
 
 Source material:
@@ -162,9 +162,8 @@ Source material:
 
   <!-- STEP 3 -->
   <section class="step" id="step3">
-    <h2><span class="n">3</span> Opportunity checklist <em>Score a real account</em></h2>
-    <p class="owner">Owner: <strong>Stefan</strong> · Target: consultants</p>
-    <p class="what">Runs Stefan's 20-point checklist against one named client and gives you a band: A, B or C. Log the result in Ezekia as a note against that account.</p>
+    <h2><span class="n">3</span> <span class="owner-tag">Stefan</span> Opportunity checklist <em>Score a real account</em></h2>
+    <p class="what">Scores one named client, band A/B/C. Log the result in Ezekia as a note on that account.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Score this account against AIMS's CBB opportunity checklist.
 
 Client: <b>[client name]</b>
@@ -204,13 +203,13 @@ Checklist — mark each yes/no with a one-line reason:
 - Is there a concrete next step to initiate collaboration with another country?
 
 Total the yes answers (1 point each) and give the band: A (more than 12, concrete potential), B (more than 6, potential but unconfirmed), C (6 or fewer, no actionable demand yet). Use web search for anything you can check publicly; say "can't verify" rather than guessing on the rest.</pre></div>
+    <p class="swap">*For the committee: Mark's Radar concept uses a different 5-level grade instead of A/B/C — Strong relationship (qualify immediately), No known blockers (standard), Real unknowns (investigate first), Real friction (park), Structural block (don't pursue). Worth discussing whether to upgrade to this before the AGM; kept as A/B/C here since Kerstin's existing data already uses it.</p>
   </section>
 
   <!-- STEP 4 -->
   <section class="step" id="step4">
-    <h2><span class="n">4</span> Conversation &amp; pitch guide <em>Prep the call, build the pitch</em></h2>
-    <p class="owner">Owner: <strong>John</strong> · Target: consultants</p>
-    <p class="what">Three prompts, same conversation. Use this once you already know who you're talking to — the account-mapping pack is a separate tool for finding them in the first place.</p>
+    <h2><span class="n">4</span> <span class="owner-tag">John</span> Conversation &amp; pitch guide <em>Prep the call, build the pitch</em></h2>
+    <p class="what">Three prompts, same conversation. Use once you already know who you're talking to.</p>
 
     <h4>Research the counterpart office and the prospect</h4>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>I'm an AIMS partner in <b>[your country]</b> preparing for a first call with AIMS <b>[the other country]</b>. Use web search.
@@ -244,9 +243,8 @@ Prospect: <b>[named company, if you have one]</b></pre></div>
 
   <!-- STEP 5 -->
   <section class="step" id="step5">
-    <h2><span class="n">5</span> Capability card <em>What can you and your office actually do?</em></h2>
-    <p class="owner">Owner: <strong>Kerstin</strong> · Target: internal + external</p>
-    <p class="what">A short, standard-format card any partner can scan before proposing a joint account.</p>
+    <h2><span class="n">5</span> <span class="owner-tag">Kerstin</span> Capability card <em>What can you actually do?</em></h2>
+    <p class="what">A short, standard card any partner can scan before proposing a joint account.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Build a capability card for <b>[consultant name / office]</b> in this format:
 
 - Sectors covered
@@ -260,9 +258,8 @@ Source: <b>[paste a bio, LinkedIn summary, or background notes]</b></pre></div>
 
   <!-- STEP 6 -->
   <section class="step" id="step6">
-    <h2><span class="n">6</span> Client presentation <em>Pitch the network, not just one office</em></h2>
-    <p class="owner">Owner: <strong>unassigned — drafted here</strong> · Target: clients</p>
-    <p class="what">External-facing. No internal terms — nothing about CBB, Ezekia, or scoring bands belongs in a client's copy.</p>
+    <h2><span class="n">6</span> <span class="owner-tag unassigned">Unassigned</span> Client presentation <em>Pitch the network, not one office</em></h2>
+    <p class="what">External-facing. No CBB, Ezekia, or scoring language belongs in a client's copy.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Build a client-facing pitch outline for AIMS's cross-border capability, for <b>[client name]</b>, sector <b>[sector]</b>, pairing <b>[your office]</b> and <b>[the other office]</b>.
 
 Cover:
@@ -276,9 +273,8 @@ Professional, external tone. No internal jargon — no "CBB", no Ezekia, no scor
 
   <!-- STEP 7 -->
   <section class="step" id="step7">
-    <h2><span class="n">7</span> Case study <em>Turn a placement into proof</em></h2>
-    <p class="owner">Owner: <strong>unassigned — drafted here</strong> · Target: clients</p>
-    <p class="what">Run this once per placement. Three to five good ones is the target for the toolkit.</p>
+    <h2><span class="n">7</span> <span class="owner-tag unassigned">Unassigned</span> Case study <em>Turn a placement into proof</em></h2>
+    <p class="what">Run once per placement. Three to five good ones is the target.</p>
     <div class="prompt"><button class="copy" type="button">Copy</button><pre>Turn this completed placement into a client-facing case study: challenge, approach, result, in three short paragraphs. Anonymise anything confidential. Keep it factual — no invented numbers.
 
 Raw facts: <b>[paste the placement details — client, role, countries involved, timeline, outcome]</b></pre></div>
@@ -286,25 +282,27 @@ Raw facts: <b>[paste the placement details — client, role, countries involved,
 
   <!-- STEP 8 -->
   <section class="step" id="step8">
-    <h2><span class="n">8</span> Pipeline &amp; KPI dashboard <em>Already built</em></h2>
-    <p class="owner">Owner: <strong>Mark</strong> · Target: management</p>
-    <p class="what">This one's done — Mark's AIMS Radar concept and the Search Health Dashboard already cover it. No prompt needed here; see those directly.</p>
-    <div class="note flag">
-      <strong>How this connects to what you're running:</strong> Ezekia stays the system of record — anything that becomes a real assignment gets logged there (toggle Cross-Border, log revenue), regardless of which AI tool found it. For tracking targets before there's an assignment, a shared live tracker already exists for Claude users — ask your CBB working-group contact for the link if you don't have it. It's optional, and its stage names aren't yet lined up with the Radar dashboard's — that's being sorted before the AGM.
+    <h2><span class="n">8a</span> <span class="owner-tag">Mark</span> Pipeline &amp; KPI dashboard <em>Not built yet</em></h2>
+    <p class="what">Mark's AIMS Radar concept sketches this, but it needs clean, complete Ezekia data from every country first — not there yet. No prompt to run here.</p>
+    <div class="note">
+      <strong>AGM ask:</strong> Central Ops (Kerstin) to formalise a live tracker sourced directly from Ezekia, contingent on full network adoption. Raise as its own agenda point, alongside the A/B/C-vs-grade question above.
     </div>
-    <div class="prompt"><button class="copy" type="button">Copy</button><pre>Turn my current CBB activity into one row for the network dashboard: company, countries touched, stage (signal / qualified / engaged / pitch / assignment / won), and grade. Keep it to one line per account, plain text, ready to paste into a shared sheet.
 
-My activity: <b>[list what you've done — accounts flagged, calls made, pitches sent]</b></pre></div>
+    <h4 style="margin-top:20px">8b — Search Health Dashboard <span class="owner-tag" style="margin-left:6px">Mark</span></h4>
+    <p class="what">Already exists, already in use — tracks one live assignment day to day. A different job to 8a: one search's health, not the network's pipeline.</p>
   </section>
 
   <!-- CAPSTONE -->
   <section class="step" id="capstone">
     <h2><span class="n alt">Last step</span> Turn it into a deck</h2>
-    <p class="what">Once you've run whichever of the eight apply to you, in the same Project, this pulls it all together.</p>
-    <div class="prompt"><button class="copy" type="button">Copy</button><pre>You've now run the CBB prompts in this Project — strategy check, one-pager, opportunity checklist, conversation & pitch guide, capability card, client presentation, case studies. Pull it all together into a single deck for <b>[an internal review / the AGM / a partner meeting]</b>: one slide per section, headline first, only real numbers and sources — nothing invented.
+    <p class="what">Once you've run whichever steps apply to you, in the same Project, this pulls it all together as a real, downloadable PowerPoint.</p>
+    <div class="prompt"><button class="copy" type="button">Copy</button><pre>You've now run the CBB prompts in this Project. Turn it into a downloadable PowerPoint deck for <b>[an internal review / the AGM / a partner meeting]</b>: one slide per section, headline first, only real numbers and sources — nothing invented.
+
+Style it in AIMS International's branding: near-black (#0E0E0E) and orange (#DC613A), clean sans-serif, plenty of white space, one idea per slide.
 
 Title it "<b>[your pairing]</b> — Cross-Border Business Review".</pre></div>
-    <p class="swap"><strong>New pairing or sector?</strong> Start a new Project, work through Steps 1–8 again with your own details, and finish with this same prompt.</p>
+    <p class="swap">Doesn't come out looking right? <a class="link" href="brand/AIMS-CBB-deck-template.pptx">Download the blank AIMS template</a> and paste the text in instead.</p>
+    <p class="swap"><strong>New pairing or sector?</strong> Start a new Project, work through the steps again with your own details, and finish with this same prompt.</p>
   </section>
 
   <footer>
